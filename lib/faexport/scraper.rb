@@ -286,7 +286,7 @@ class Furaffinity
 
     {
       title: html.at_css('#page-submission td.cat b').content,
-      description: submission.css('td.alt1')[2].children.to_s.strip,
+      description: submission.css('td.alt1')[2].children.to_s.strip.encode("UTF-8").scrub,
       name: html.at_css('td.cat a').content,
       profile: fa_url(profile_url),
       profile_name: last_path(profile_url),
@@ -576,7 +576,6 @@ private
         response.read
       end
     end
-
     html = Nokogiri::HTML(raw)
 
     head = html.xpath('//head//title').first
