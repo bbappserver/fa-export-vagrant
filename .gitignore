@@ -1,1 +1,4 @@
 settings.yml
+.vagrant
+*.log
+*.json

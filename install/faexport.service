@@ -1,0 +1,14 @@
+# /etc/systemd/system/faexport.service
+[Unit]
+Description=The API for furaffinity you wish existed
+
+Requires=redis.service
+
+[Service]
+Type=forking
+ExecStart=/bin/bash /vagrant/serve
+Restart=always
+TimeoutSec=10
+
+[Install]
+WantedBy=multi-user.target
