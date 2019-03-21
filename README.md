@@ -5,6 +5,14 @@ Simple data export and feeds from FA.
 Check out the [documentation](http://faexport.boothale.net/docs) for a full list of functionality.
 The file `lib/faexport/scraper.rb` contains all the code required to access data from FA.
 
+## Vagrant setup
+Just want FAExport running? Install vagrant then
+```
+vagrant up
+```
+A virtual machine will be built with everything you need, running FAexport on port `9292`.
+If you need to change this edit the startup script called `serve`
+
 Development Setup
 -----------------
 
